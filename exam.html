@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fizzbuzz(start,end){
+            for(let i=start;i<=end;i++){
+                if(i%5==0 && i%3==0)
+                    console.log("FizzBuzz");
+                else if(i%3==0)
+                    console.log("Fizz")
+                else if(i%5==0)
+                    console.log("Buzz")
+                else 
+                 console.log(i)
+            }
+        }
+        fizzbuzz(1,100);
+
+        let rev="";
+        function palindrome(str){
+            for(let i=str.length-1;i>=0;i--){
+                rev+=str.charAt(i);
+            }
+            return rev==str;
+        }
+        console.log(palindrome("abba"))
+        
+        let max=0;
+        function maximum(num){
+            for(let i=0;i<num.length;i++){
+                if(num[i]>max)
+                  max=num[i]
+            }
+            return max;
+        }
+        console.log(maximum([1,2,3,4,5]))
+
+
+        let maxi=0;
+        function longest(str){
+            let arr=str.split(" ")
+            for(let i=0;i<arr.length;i++){
+                if(arr[i].length>maxi)
+                  maxi=arr[i].length
+            }
+            return maxi;
+        }
+        console.log(longest("krish raj hi"))
+
+        let i,j;
+        function occurance(str){
+            for(i=0;i<str.length;i++){
+                let count=1;
+                for(j=i+1;j<str.length;j++){
+                    if(str.charAt(i)==str.charAt(j))
+                      count++;
+                }       
+                console.log(str.charAt(i)+":"+count);
+            }
+        }
+        console.log(occurance("python"))
+    
+        
+
+        let fact=1;
+        function factorial(num){
+            for(let i=1;i<=num;i++){
+                fact*=i;
+            }
+            return fact;
+        }
+        console.log(factorial(5))
+
+
+        function missing(arr,length){
+            for(let i=0;i<length;i++){
+                if(arr[i+1]==arr[i]+1)
+                  continue;
+                else
+                 return arr[i]+1;
+            }
+        }
+        console.log(missing([1,2,3,4,5,6,7,8],9))
+
+        function convert(num){
+            let ans=(9/5)*num+32;
+            return ans;
+        }
+        console.log(convert(10)+"F");
+
+        
+
+
+        </script>
+        
+</body>
+</html>
+
